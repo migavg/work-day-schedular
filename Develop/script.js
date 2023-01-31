@@ -4,10 +4,28 @@
 
 $(function () {
   var myDate = dayjs();
-  $("#currentDay").text(myDate.format("dddd, MMMM D YYYY, h:mm:ss a"));
+  // var storageInput = document.querySelector(".description");
 
- 
- 
+
+
+  $(".saveBtn").on("click", function() {
+    var description = $(this).siblings(".description").val();
+    var time = $(this).parent().attr("id");
+    localStorage.setItem(time,description);
+    console.log(time);
+    console.log(description);
+
+  });
+
+
+$("#hour-9 .description").val(localStorage.getItem("hour-9"));
+
+
+
+
+  $("#currentDay").text(myDate.format("dddd, MMMM D YYYY, h:mm a"));
+
+
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
   // local storage. HINT: What does `this` reference in the click listener
@@ -23,9 +41,15 @@ $(function () {
   // past, present, and future classes? How can Day.js be used to get the
   // current hour in 24-hour time?
   //
+
+
+
+
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
   //
+
+
   // TODO: Add code to display the current date in the header of the page.
 });
