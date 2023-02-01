@@ -11,7 +11,8 @@ Several classmates and I tried to break down different aspects of the challenge,
 Most of the criteria is there, besides the color class changing functionality which I unfortunately did not complete. 
 
 
-Deployed link: 
+Deployed link: https://migavg.github.io/work-day-scheduler/
+
 
 ![](Assets/images/schedulerScreenshot.PNG)
 
